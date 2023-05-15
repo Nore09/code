@@ -20,7 +20,24 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
-    if (input.buttonIsPressed(Button.A)) {
+    if (code == 0 && input.buttonIsPressed(Button.A)) {
         code += 1
+    }
+    if (code == 1 && input.buttonIsPressed(Button.B)) {
+        code += 1
+    }
+    if (code == 2 && input.logoIsPressed()) {
+        code += 1
+    }
+    if (code == 3 && input.buttonIsPressed(Button.A)) {
+        code += 1
+    }
+    if (code == 4 && input.logoIsPressed()) {
+        code += 1
+    }
+})
+basic.forever(function () {
+    if (code == 0) {
+        basic.showString("c")
     }
 })
